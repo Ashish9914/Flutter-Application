@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  final DBRef = FirebaseDatabase.instance.reference();
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "androidmonks",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("androidmonks"),
+        ),
+        body: Row(
+          children: <Widget>[
+            RaisedButton(
+              child: Text("write data"),
+              onPressed: () {
+                writeData();
+              },
+            ),
+            RaisedButton(
+              child: Text("read data"),
+              onPressed: () {
+                readData();
+              },
+            ),
+            RaisedButton(
+              child: Text("update"),
+              onPressed: () {
+                updateData();
+              },
+            ),
+            RaisedButton(
+              child: Text("delete data"),
+              onPressed: () {
+                deleteData();
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void writeData() {
+    DBRef.child("1").set({'id': 'id1', 'data': 'this is sample data'});
+  }
+
+  void readData() {
+    DBRef.once().then((DataSnapshot dataSnapShot) {
+      print(dataSnapShot.value);
+    });
+  }
+
+  void updateData() {
+    DBRef.child("1").update({'data': 'this is updated value'});
+  }
+
+  void deleteData() {
+    DBRef.child("1").remove();
+  }
+}
