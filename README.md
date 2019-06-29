@@ -1,6 +1,6 @@
 # firebaseintegration
 
-A new Flutter project.
+A new Flutter project.This application is integrated with firebase database and applying all the crud operations on the data , you will also find an good interface .
 
 ## Getting Started
 
