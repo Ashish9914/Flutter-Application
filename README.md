@@ -1,6 +1,7 @@
 # firebaseintegration
 
-A new Flutter project.This application is integrated with firebase database and applying all the crud operations on the data , you will also find an good interface .
+A new Flutter project.
+This application was built using dart language and it is integrated with firebase for the databse , in this application you can see that all the CRUD operations are applied ,it's built with a beautiful interface
 
 ## Getting Started
 
@@ -14,3 +15,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+
+Contributors: Sri charan yeluri
